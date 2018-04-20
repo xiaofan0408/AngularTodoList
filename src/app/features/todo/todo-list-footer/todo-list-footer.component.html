@@ -1,0 +1,16 @@
+<footer class="footer" *ngIf="todos && todos.length > 0">
+  <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
+  <ul class="filters">
+    <li>
+      <a [routerLink]="['/todo/all']" [class.selected]="path === 'all'">All</a>
+    </li>
+    <li>
+      <a [routerLink]="['/todo/active']" [class.selected]="path === 'active'">Active</a>
+    </li>
+    <li>
+      <a [routerLink]="['/todo/completed']" [class.selected]="path === 'completed'">Completed</a>
+    </li>
+  </ul>
+  <!-- Hidden if no completed items are left ↓ -->
+  <button class="clear-completed" (click)="clearCompleted()">Clear completed</button>
+</footer>
