@@ -10,7 +10,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
+   "peerDependencies": {
+    "@angular/core": "^4.0.0 || ^5.0.0",
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.14"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
+  },
   "devDependencies": {
     "@angular/cli": "1.6.5",
     "@angular/compiler-cli": "^5.2.0",
